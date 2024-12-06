@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones de Venta - Worldcoin Cúcuta</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .instructions-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .step-card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-number {
+            background-color: #ffcc00;
+            color: #000;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .important-note {
+            background-color: rgba(255, 204, 0, 0.1);
+            border-left: 4px solid #ffcc00;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .payment-method {
+            display: inline-block;
+            background-color: #2a2a2a;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin: 5px;
+        }
+        
+        .back-button {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #e6b800;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .whatsapp-float a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #34c759;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .whatsapp-float .tooltip {
+            font-size: 14px;
+            color: #fff;
+            margin-left: 10px;
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .whatsapp-float a:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <h1>Worldcoin Cúcuta</h1>
+        </div>
+    </nav>
+    <div class="overlay"></div>
+    
+    <div class="instructions-container">
+        <div class="step-card">
+            <h1>Proceso de Venta de Worldcoin (WLD)</h1>
+            <p>Sigue estos pasos para vender tus WLD de manera segura y rápida.</p>
+        </div>
+
+        <div class="step-card">
+            <h2><span class="step-number">1</span>Calculando tu Venta</h2>
+            <p>En la página principal:</p>
+            <ul>
+                <li>Ingresa la cantidad de WLD que deseas vender</li>
+                <li>El sistema calculará automáticamente cuántos Pesos Colombianos (COP) recibirás</li>
+                <li>El precio se actualiza en tiempo real según el mercado</li>
+                <li>Se aplica una comisión de procesamiento y tasa de cambio</li>
+            </ul>
+        </div>
+
+        <div class="step-card">
+            <h2><span class="step-number">2</span>Completando el Formulario</h2>
+            <p>Proporciona la siguiente información:</p>
+            <ul>
+                <li>Nombre completo (como aparece en tu documento)</li>
+                <li>Número de documento de identidad (8-12 dígitos)</li>
+                <li>Correo electrónico válido</li>
+                <li>Número de teléfono (10 dígitos)</li>
+                <li>Método por el cual deseas recibir tu dinero</li>
+                <li>Número de cuenta bancaria donde recibirás el pago</li>
+            </ul>
+        </div>
+
+        <div class="step-card">
+            <h2><span class="step-number">3</span>Métodos de Pago Disponibles</h2>
+            <p>Te podemos enviar el dinero a través de:</p>
+            <div>
+                <span class="payment-method">Nequi</span>
+                <span class="payment-method">Bancolombia</span>
+                <span class="payment-method">Daviplata</span>
+                <span class="payment-method">Davivienda</span>
+                <span class="payment-method">Efectivo</span>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <h2><span class="step-number">4</span>Proceso de Envío de WLD</h2>
+            <ol>
+                <li>Recibirás la dirección de wallet para enviar tus WLD</li>
+                <li>Realiza la transferencia de la cantidad exacta de WLD acordada</li>
+                <li>Guarda el hash de la transacción y toma captura de pantalla</li>
+                <li>Envíanos el comprobante de la transacción a nuestro WhatsApp</li>
+            </ol>
+        </div>
+
+        <div class="step-card">
+            <h2><span class="step-number">5</span>Recibiendo tu Pago</h2>
+            <p>Una vez confirmada tu transferencia de WLD:</p>
+            <ul>
+                <li>Procesaremos tu pago en 15-30 minutos</li>
+                <li>Recibirás el dinero en la cuenta bancaria proporcionada</li>
+                <li>Te enviaremos una confirmación por WhatsApp y correo electrónico</li>
+            </ul>
+        </div>
+
+        <div class="important-note">
+            <h3>⚠️ Notas Importantes:</h3>
+            <ul>
+                <li>Asegúrate de que todos los datos proporcionados sean correctos</li>
+                <li>Los pagos pueden tardar entre 15 y 30 minutos en procesarse</li>
+                <li>Guarda el hash de la transacción de WLD o la captura de pantalla</li>
+                <li>No compartimos tus datos personales con terceros</li>
+                <li>Para cualquier duda o consulta, contáctanos a través de nuestros canales oficiales</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-button">← Volver al Inicio</a>
+    </div>
+    
+    <div class="whatsapp-float">
+        <a href="https://wa.me/573227731923" target="_blank" title="Contactar por WhatsApp">
+            <svg viewBox="0 0 24 24" fill="white">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+            <span class="tooltip">¿Necesitas ayuda? ¡Escríbenos!</span>
+        </a>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Worldcoin Cúcuta. Todos los derechos reservados. | <a href="terminos.html">Términos y Condiciones</a> | <a href="privacidad.html">Política de Privacidad</a> | <a href="tratamiento_datos.html">Autorización de Datos</a></p>
+    </footer>
+</body>
+</html>

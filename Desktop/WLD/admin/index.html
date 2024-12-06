@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Worldcoin Cúcuta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>WLD Admin</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="/admin" class="nav-item active">
+                    <i class="mdi mdi-view-dashboard"></i>
+                    Dashboard
+                </a>
+                <a href="/admin/users" class="nav-item">
+                    <i class="mdi mdi-account-multiple"></i>
+                    Usuarios
+                </a>
+                <a href="/admin/transactions" class="nav-item">
+                    <i class="mdi mdi-cash-multiple"></i>
+                    Transacciones
+                </a>
+                <a href="/admin/settings" class="nav-item">
+                    <i class="mdi mdi-cog"></i>
+                    Configuración
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-search">
+                    <i class="mdi mdi-magnify"></i>
+                    <input type="text" placeholder="Buscar transacciones...">
+                </div>
+                <div class="header-user">
+                    <span class="user-name">Admin</span>
+                    <div class="user-menu">
+                        <i class="mdi mdi-account-circle"></i>
+                        <div class="dropdown-menu">
+                            <a href="/admin/settings" class="menu-item">
+                                <i class="mdi mdi-cog"></i>
+                                Configuración
+                            </a>
+                            <a href="#" id="logoutButton" class="menu-item">
+                                <i class="mdi mdi-logout"></i>
+                                Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="mdi mdi-account-multiple"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Usuarios</h3>
+                            <p class="stat-number">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="mdi mdi-cash"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total WLD</h3>
+                            <p class="stat-number">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="mdi mdi-chart-line"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Transacciones</h3>
+                            <p class="stat-number">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions -->
+                <div class="transactions-section">
+                    <div class="section-header">
+                        <h2>Transacciones Recientes</h2>
+                        <button class="btn-export">
+                            <i class="mdi mdi-download"></i>
+                            Exportar
+                        </button>
+                    </div>
+                    <div class="transactions-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Método</th>
+                                    <th>WLD</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionsBody">
+                                <!-- Los datos se cargarán dinámicamente aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

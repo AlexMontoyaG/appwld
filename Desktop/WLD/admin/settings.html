@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - Worldcoin Cúcuta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>WLD Admin</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="/admin" class="nav-item">
+                    <i class="mdi mdi-view-dashboard"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="mdi mdi-account-multiple"></i>
+                    Usuarios
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="mdi mdi-cash-multiple"></i>
+                    Transacciones
+                </a>
+                <a href="/admin/settings" class="nav-item active">
+                    <i class="mdi mdi-cog"></i>
+                    Configuración
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Configuración</h1>
+                <div class="header-user">
+                    <span class="user-name">Admin</span>
+                    <div class="user-menu">
+                        <i class="mdi mdi-account-circle"></i>
+                        <div class="dropdown-menu">
+                            <a href="/admin/settings" class="menu-item">
+                                <i class="mdi mdi-cog"></i>
+                                Configuración
+                            </a>
+                            <a href="#" id="logoutButton" class="menu-item">
+                                <i class="mdi mdi-logout"></i>
+                                Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <div class="settings-container">
+                <div class="settings-card">
+                    <h2>Cambiar Contraseña</h2>
+                    <form id="changePasswordForm" class="settings-form">
+                        <div class="form-group">
+                            <label for="currentPassword">Contraseña Actual</label>
+                            <input type="password" id="currentPassword" name="currentPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">Nueva Contraseña</label>
+                            <input type="password" id="newPassword" name="newPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmar Nueva Contraseña</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Cambiar Contraseña</button>
+                    </form>
+                    <div id="message" class="message"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="settings.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

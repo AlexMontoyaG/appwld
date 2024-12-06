@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transacciones - Worldcoin Cúcuta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>WLD Admin</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="/admin" class="nav-item">
+                    <i class="mdi mdi-view-dashboard"></i>
+                    Dashboard
+                </a>
+                <a href="/admin/users" class="nav-item">
+                    <i class="mdi mdi-account-multiple"></i>
+                    Usuarios
+                </a>
+                <a href="/admin/transactions" class="nav-item active">
+                    <i class="mdi mdi-cash-multiple"></i>
+                    Transacciones
+                </a>
+                <a href="/admin/settings" class="nav-item">
+                    <i class="mdi mdi-cog"></i>
+                    Configuración
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Transacciones</h1>
+                <div class="header-actions">
+                    <div class="header-search">
+                        <i class="mdi mdi-magnify"></i>
+                        <input type="text" id="searchTransactions" placeholder="Buscar transacciones...">
+                    </div>
+                    <button class="btn-export" id="exportButton">
+                        <i class="mdi mdi-download"></i>
+                        Exportar
+                    </button>
+                    <div class="header-user">
+                        <span class="user-name">Admin</span>
+                        <div class="user-menu">
+                            <i class="mdi mdi-account-circle"></i>
+                            <div class="dropdown-menu">
+                                <a href="/admin/settings" class="menu-item">
+                                    <i class="mdi mdi-cog"></i>
+                                    Configuración
+                                </a>
+                                <a href="#" id="logoutButton" class="menu-item">
+                                    <i class="mdi mdi-logout"></i>
+                                    Cerrar Sesión
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Transactions Content -->
+            <div class="transactions-container">
+                <div class="filters">
+                    <select id="statusFilter">
+                        <option value="">Todos los estados</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="completado">Completado</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+                    <input type="date" id="dateFilter">
+                </div>
+                <div class="transactions-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>Usuario</th>
+                                <th>Método</th>
+                                <th>WLD</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionsTableBody">
+                            <!-- Las transacciones se cargarán dinámicamente aquí -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="pagination" class="pagination">
+                    <!-- La paginación se generará dinámicamente -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="common.js"></script>
+    <script src="transactions.js"></script>
+</body>
+</html>
